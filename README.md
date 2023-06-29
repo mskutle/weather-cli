@@ -6,7 +6,7 @@ Easily print the current weather + forecast for the rest of the day at any locat
 
 Obtain a (free) API key from (weatherapi.com)[https://www.weatherapi.com/] and set the WEATHER_API_KEY env var on your system
 
-## Installation (on macOS. Should be similar on other OSes)
+## Installation (macOS)
 
 1. Clone the repo and cd into the folder
 2. `go build -o bin/weather`
