@@ -4,7 +4,7 @@ Easily print the current weather + forecast for the rest of the day at any locat
 
 ## Prerequisites
 
-Obtain a (free) API key from (weatherapi.com)[https://www.weatherapi.com/] and set the WEATHER_API_KEY env var on your system
+Obtain a (free) API key from [weatherapi.com](https://www.weatherapi.com/) and set the WEATHER_API_KEY env var on your system
 
 ## Installation (macOS)
 
