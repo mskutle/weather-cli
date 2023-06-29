@@ -9,28 +9,22 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/spf13/viper"
 )
 
 func main() {
-	viper.SetConfigFile(".env")
-	err := viper.ReadInConfig()
-	if err != nil {
-		panic("could not read .env file")
-	}
-	apiKey := viper.GetString("WEATHER_API_KEY")
+	apiKey := os.Getenv("WEATHER_API_KEY")
 
 	if len(apiKey) == 0 {
 		panic("missing api key")
 	}
 
-	q := "Drammen"
+	q := "Fiskum"
 
 	if len(os.Args) >= 2 {
 		q = os.Args[1]
 	}
 
-	resp, err := http.Get(fmt.Sprintf("http://api.weatherapi.com/v1/forecast.json?key=%s&q=%s&days=14", apiKey, q))
+	resp, err := http.Get(fmt.Sprintf("http://api.weatherapi.com/v1/forecast.json?key=%s&q=%s&days=1", apiKey, q))
 	if err != nil {
 		panic(err)
 	}
